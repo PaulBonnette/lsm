@@ -2,6 +2,10 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+servers
+.env
+.env_server
+.env_site
 
 # Laravel 4 specific
 bootstrap/compiled.php
