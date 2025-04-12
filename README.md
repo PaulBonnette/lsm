@@ -1,44 +1,66 @@
-LSM - Laravel Server Manager - In Progress
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-This project is not usable at this time. Check back shortly. I hope to have it functional in a few months.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Managing a server properly requires a great deal of specialized knowledge. Additionally it can be easy to make a mistake and leave a back door open on a server. LSM assists in managing multiple servers, quickly installing the necessary software packages, configuring it and locking it down against intrusion. This is not an easy task. Even when it is, it's easy to make a mistake. LSM is here to help.  (No guarantees)
-Definitions
+## About Laravel
 
-- PC - the computer which manages the Laravel-hosting servers. Usually this is your workstation.
-- Server - the server, usually a droplet, which hosts a laravel website. There can be any number of servers. Eventually I will be supporting other server types.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-# Central "PC" Manager
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-One central PC (usually your workstation) manages your servers by helping you:
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-- Upload LSM updates to the remote Servers
-- Pull configuration changes from each remote server to the PC as a backup
-- Manage many remote servers
+## Learning Laravel
 
-Managing Servers
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-The Laravel hosting server is usually a Droplet, but I hope to allow other server types in the future. This project allows the user to do the following, starting from a bare-bones droplet:
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-- Install necessary packages and software, including: Letsencrypt, NTP server, nginx, postfix, PHP 8.3+, nmap, etc.
-- Configure necessary packages, including firewall, server certificates, etc.
-- Evaluate any server for security holes and fix them automatically. This includes properly configuring the ufw firewall to only allow necessary traffic, etc.
-- Manage websites deployments
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-Managing Websites & Deployments
+## Laravel Sponsors
 
-This project supports website management including:
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-- Multiple websites on a single server with different ports.
-- Auto-generation of nginx configuration files with Letsencrypt certificates.
-- Backup restoration of spatie-backup files with rollback support.
-- Copying of an existing website with rollback support.
-- Github update of an existing website with rollback support.
+### Premium Partners
 
-LSM instead of GitHub Continuous Deployment
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-- GitHub Continuous Deployment is difficult to impliment behind a firewall.
-- LSM means you don't need to give GitHub your credentials. We are pulling the project from GitHub instead of pushing it.
-- Your server can remain on-premises.
-- Your server can be hosted behind a firewall with no direct public access.
+## Contributing
 
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
