@@ -1,0 +1,5 @@
+history.txt
+
+2025-04-15 build server configuration files which do not get uploaded to github
+  investigating copilot
+
