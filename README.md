@@ -1,6 +1,6 @@
-## LSM - Laravel Server Manager - Status=Started
+## LSM - Laravel Server Manager
 
-This project has just begun.  Don't bother looking - yet.
+This project has just begun.  Don't bother looking - yet.  It is a set of "php artison" console commands.
 
 ## Goal
 
