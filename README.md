@@ -1,46 +1,43 @@
-# LSM - Laravel Server Manager - In Progress
+# LSM - Laravel Server Manager - Status=Started
 
-# This project is NOT usable YET!
+# This project has just begun.  Don't bother looking - yet.
 
-Managing a server properly requires a great deal of specialized knowledge. Additionally it can be easy to make a mistake and leave a back door open on a server. LSM assists in managing multiple servers, quickly installing the necessary software packages, configuring it and locking it down against intrusion. This is not an easy task. Even when it is, it's easy to make a mistake. LSM is here to help.  (No guarantees)
-Definitions
+# Goal
 
-- PC - the computer which manages the Laravel-hosting servers. Usually this is your workstation.
-- Server - the server, usually a droplet, which hosts a laravel website. There can be any number of servers. Eventually I will be supporting other server types.
+A Linux Server Management (LSM) tool to help configure and manage multiple linux servers for Laravel projects.  It runs on your "PC" and manages many "SERVERS".  Written in PHP 8.4 it handles three groups of general tasks:
 
-# Central "PC" Manager
+# 1 - Centralized Management - one "PC" to manage them all.
 
 One central PC (usually your workstation) manages your servers by helping you:
 
-- Upload LSM updates to the remote Servers
-- Pull configuration changes from each remote server to the PC as a backup
-- Manage many remote servers
+- Upload LSM updates to the remote Servers. 
+- Pull configuration changes from each remote server to the PC as a backup.
+- Push backups to the remote servers.
 
-# Managing Servers
+# 2 - Managing Servers - commands to help you manage and scan your server for vulnerabilities.
 
 The Laravel hosting server is usually a Droplet, but I hope to allow other server types in the future. This project allows the user to do the following, starting from a bare-bones droplet:
 
-- Install necessary packages and software, including: Letsencrypt, NTP server, nginx, postfix, PHP 8.3+, nmap, etc.
+- Install necessary packages and software, including: Letsencrypt, NTP server, nginx, postfix, PHP 8.4+, nmap, Cockpit and plugins, etc.
 - Configure necessary packages, including firewall, server certificates, etc.
 - Evaluate any server for security holes and fix them automatically. This includes properly configuring the ufw firewall to only allow necessary traffic, etc.
 - Manage websites deployments
 
 Managing Websites & Deployments
 
-# This project supports website management including:
+# 3 - Managing Website Releases - commands for handling website releases.
 
-- Multiple websites on a single server with different ports.
+- Manage multiple websites on a single server.
 - Auto-generation of nginx configuration files with Letsencrypt certificates.
 - Backup restoration of spatie-backup files with rollback support.
 - Copying of an existing website with rollback support.
 - Github update of an existing website with rollback support.
 
-# LSM instead of GitHub Continuous Deployment
+# Why LSM instead of GitHub Continuous Deployment?
 
 - GitHub Continuous Deployment is difficult to impliment behind a firewall.
-- LSM means you don't need to give GitHub your credentials. We are pulling the project from GitHub instead of pushing it.
-- Your server can remain on-premises.
-- Your server can be hosted behind a firewall with no direct public access.
+- Tighter security since GitHub does not need to know how to log into your server. (You pull the project from GitHub instead of pushing it.)
+- Your server can remain on-premises, even behind a firewall.
 
 # License
 
