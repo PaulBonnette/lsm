@@ -1,6 +1,8 @@
 ## LSM - Laravel Server Manager
 
-This project has just begun.  Don't bother looking - yet.  It is a set of "php artisan" console commands.
+This Laravel project is written in PHP 8.4.  It is a set of "php artisan" console commands to make Laravel server management easy and secure.  
+
+Right now I'm focusing on managing Droplets.  Hopefully in a few weeks I'll be done with Droplet management.  I'm might jump to autoinstall'ed Ubuntu servers or maybe Raspberry Pi's after than.  Good fun.
 
 ## Goal
 
@@ -40,3 +42,4 @@ The Laravel hosting server commands allows you to easily manage your server with
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
