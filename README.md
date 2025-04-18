@@ -8,7 +8,7 @@ A Linux Server Management (LSM) tool to help configure and manage multiple linux
 
 ## 1 - Centralized Management - one "MANAGER" to manage them all.
 
-One central PC (usually your workstation) manages your servers by helping you:
+One central "MANAGER" installation (usually your workstation) to manage all your servers:
 
 - Upload LSM updates to the remote Servers. 
 - Pull configuration changes from each remote server to the PC, as a backup.
@@ -16,25 +16,26 @@ One central PC (usually your workstation) manages your servers by helping you:
 
 ## 2 - Managing "SERVER"s - commands to help you manage and scan your servers for vulnerabilities.
 
-The Laravel hosting server is usually a Droplet or in-house server, but I hope to allow other server types in the future. This project allows the user to do the following:
+The Laravel hosting server commands allows you to easily manage your server with standard configurations (hopefully). Like:
 
-- Droplet, in-house server, or Raspberry Pi
+- Installing on a Droplet, in-house Ubuntu 24.04+ server or Raspberry Pi, 
 - Install necessary packages and software, including: Letsencrypt, NTP server, nginx, postfix, PHP 8.4+, nmap, Cockpit and plugins, etc.
-- Configure standard packages and manage standard package set.
-- Evaluate any server for security holes and fix them automatically. This includes properly configuring the ufw firewall to only allow necessary traffic, etc.
+- Configure standard packages to work together for Laravel hosting.
+- Evaluate any server for security holes and fix them automatically. 
 
 ## 3 - Managing Website Releases - commands for handling website releases.
 
 - Manage multiple websites on a single server.
 - Auto-generation of nginx configuration files with Letsencrypt certificates.
-- Backup restoration of spatie-backup files with rollback support.
+- Auto-registration of each website's artisan heart-beat, which creates an off-server backup.
+- Backup restoration of Spatie-backup files with rollback support.
 - Copying of an existing website with rollback support.
 - Github update of an existing website with rollback support.
 
 ## Why LSM instead of GitHub Continuous Deployment?
 
-- LSM should give you tighter security since GitHub does not need to know how to log into your server. (You <em>pull</em> the project from GitHub.)
-- Your server can remain on-premises, behind a firewall, while being locked down tightly, as if it were on the Internet.  This is perfect for a private application connected to an in-house database server.  This may be a permanent arrangement or temporary as you migrate an application fully into Laravel.
+- LSM should give you tighter security since GitHub does not need to know how to log into your server. (You <em>pull</em> the project from GitHub instead of GitHub <em>pushing</em> it.)
+- Your server can remain on-premises, behind a firewall, while being locked down tightly, as if it were on the Internet.  This is perfect for a private application connected to an in-house database server or Raspberry Pi data-gathering modules spread throughout a facility.  (This may be a permanent arrangement or temporary as you migrate an application fully into Laravel.)
 
 ## License
 
